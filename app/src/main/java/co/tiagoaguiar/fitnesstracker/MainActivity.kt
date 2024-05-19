@@ -53,20 +53,16 @@ class MainActivity : AppCompatActivity() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
             val view = layoutInflater.inflate(R.layout.main_item, parent, false)
             return MainViewHolder(view)
-
         }
 
         override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
             val itemCurrent = mainItems[position]
             holder.bind(itemCurrent)
-
         }
 
         override fun getItemCount(): Int {
             return mainItems.size
-
         }
-
     }
 
     private class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -74,8 +70,6 @@ class MainActivity : AppCompatActivity() {
             val buttonTest: Button = itemView.findViewById(R.id.btn_item)
             buttonTest.setText(item.textStringId)
         }
-
     }
-
 }
 
